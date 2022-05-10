@@ -76,7 +76,7 @@ metadata:
   name: ingress
 spec:
   rules:
-    - host: app1.dmitry.com
+    - host: app1.dpapka.com
       http:
         paths:
           - path: /
@@ -86,7 +86,7 @@ spec:
                 name: app1-service
                 port:
                   number: 80
-    - host: app2.dmitry.com
+    - host: app2.dpapka.com
       http:
         paths:
           - path: /

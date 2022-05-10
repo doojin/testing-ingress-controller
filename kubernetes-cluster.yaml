@@ -15,7 +15,11 @@ spec:
         app: app1
     spec:
       containers:
-        - name: test-app
+        - args:
+            - /nginx-ingress-controller
+            - "--default-backend-service=default/app1"
+            - "--report-node-internal-ip-address=true"
+          name: test-app
           image: dmi3papka/test-app
           ports:
             - containerPort: 80
@@ -40,7 +44,11 @@ spec:
         app: app2
     spec:
       containers:
-        - name: test-app
+        - args:
+            - /nginx-ingress-controller
+            - "--default-backend-service=default/app1"
+            - "--report-node-internal-ip-address=true"
+          name: test-app
           image: dmi3papka/test-app
           ports:
             - containerPort: 80
